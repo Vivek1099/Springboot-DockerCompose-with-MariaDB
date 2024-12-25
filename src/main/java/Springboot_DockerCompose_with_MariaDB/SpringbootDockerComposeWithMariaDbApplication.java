@@ -2,7 +2,7 @@ package Springboot_DockerCompose_with_MariaDB;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-// first build your image of your application {docker build -t "image_name"}
+// first build your image of your application {docker compose up --build}
 // then use docker compose up
 // for accessing mariadb {docker exec -it container_name mariadb -u root -p}
 
