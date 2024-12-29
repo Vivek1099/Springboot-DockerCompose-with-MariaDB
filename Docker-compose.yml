@@ -3,6 +3,7 @@ services:
   db:
     image: mariadb:latest
     container_name: mariacontainer
+#    restart: unless-stopped
     environment:
       MYSQL_ROOT_USERNAME: root
       MYSQL_ROOT_PASSWORD: root
@@ -13,12 +14,13 @@ services:
   app:
     image: testspringimage # Replace with your actual Spring Boot image
     build: .
+#    restart: on-failure
     depends_on:
       - db
     ports:
-       - 8080:8080
-#      - 2300:8080
-#      - 2600:8080
+       - "8080"
+    deploy:
+      replicas: 3
     environment:
       # instead of localhost we will use "db" which is a service name.
       SPRING_DATASOURCE_URL: jdbc:mariadb://db:3306/mydb

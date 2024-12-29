@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 //docker run --name my-mariadb -e MARIADB_ROOT_PASSWORD=root -e MYSQL_DATABASE=mydb -p 3306:3306 -d mariadb:latest
 @SpringBootApplication
-public class SpringbootDockerComposeWithMariaDbApplication {
-
+public class SpringbootDockerComposeWithMariaDbApplication
+{
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootDockerComposeWithMariaDbApplication.class, args);
 	}

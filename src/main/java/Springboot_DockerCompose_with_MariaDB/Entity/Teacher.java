@@ -2,7 +2,7 @@ package Springboot_DockerCompose_with_MariaDB.Entity;
 
 import jakarta.persistence.*;
 
-@Entity(name = "teacherinfo")
+@Entity(name = "teacherdata")
 public class Teacher
 {
     @Id
